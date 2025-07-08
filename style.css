@@ -7,6 +7,40 @@ body {
 	background-color: #ffffff;
 }
 
+.left {
+	background-color:rgb(31, 118, 147);
+	width:27%;
+	position:fixed;
+	height:100vh;
+	box-shadow: 4px 8px 6px -2px #ccc;
+}
+
+.monument{
+	width:90%;
+	background-color:red;
+	background-image: url("images/monument.png");
+	background-repeat: no-repeat;
+	background-size: 100% 300px;
+	background-position:-100% bottom;
+}
+
+#city_title_1{
+	text-align:center;
+	font-size: 4em;
+	font-family: script;
+}
+
+#city_title_2{
+	text-align:center;
+	font-size: 2em;
+	font-family: dosis;
+}
+
+.charts{
+	margin-left:450px;
+	flex: 1;
+}
+
 /* position image and dots */
 /* .card,#agra,#aligarh,#lucknow{
 	margin: 20px 20px;
@@ -14,23 +48,20 @@ body {
 } */
 
 .card{
-	padding:20px;
-	border-radius:100px;
-	background-color:#12b2ce;
-	height:400px;
-	width:fit-content;
-	display:flex;
-	justify-content:center;
-	align-items:center;
+	/* background-color:#12b2ce; */
+	width:100%;
 }
 
 #card_image{
+	padding-top: 5%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 	width:100%;
-	height:100%;
 }
 
 #image{
-	height:100%;
+	width:90%
 }
 .selected_city{
   height: 100%;
@@ -49,26 +80,26 @@ body {
 
 
 /* position of Agra */
-#agra{
-	top: 212px;
-	left: 60px;}
+#disc_agra{
+	top: 22%;
+	left: 13.5%;}
 
 /* position of aligarh */
-#aligarh{
-	top: 168px;
-	left: 67px;}
+#disc_aligarh{
+	top: 17%;
+	left: 15.5%;}
 
 	
 /* position of lucknow */
-#lucknow{
-	top: 230px;
-	left: 220px;}
+#disc_lucknow{
+	top: 24%;
+	left: 49%;}
 
 /* height and width of containers of discs */
-#agra,#aligarh,#lucknow{
+#disc_agra,#disc_aligarh,#disc_lucknow{
 	cursor: pointer;
-	height:10px;
-	width:10px;
+	height:1.5%;
+	aspect-ratio:1/1;
 	position:absolute;
 
 	/* background-color:green; */
@@ -91,14 +122,39 @@ body {
     background-color: rgb(192, 192, 192);
     border-radius: 20px;
     width: 300px;
-    height: 16px;
+    height: 14px;
     }
 
 .progress {
     background-color: rgb(232, 91, 48);
     border-radius: 20px;
-	width: 20%;
-    height: 16px;
+	width: 60%;
+    height: 14px;
+}
+
+.progress1 {
+    background-color: rgb(232, 91, 48);
+    border-radius: 20px;
+	width: 80%;
+    height: 14px;
+}
+.progress2 {
+    background-color: rgb(232, 91, 48);
+    border-radius: 20px;
+	width: 90%;
+    height: 14px;
+}
+.progress3 {
+    background-color: rgb(232, 91, 48);
+    border-radius: 20px;
+	width: 90%;
+    height: 14px;
+}
+.progress4 {
+    background-color: rgb(232, 91, 48);
+    border-radius: 20px;
+	width: 100%;
+    height: 14px;
 }
 
 .card1{
@@ -110,13 +166,60 @@ body {
 }
 
 .subtitle{
+	margin-top:10px;
     height:fit-content;
 }
 
-#progress_percentage{
+.progress_percentage{
 	width:50px;
 	font-size:14px;
 	text-align:center;
 }
 
 /* bar chart ends */
+
+
+/* tooltip starts */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* tooltip ends */
+
+
+
+/* custom fonts starts */
+@font-face {
+  font-family: script;
+  src: url(font/DancingScript.ttf);
+}
+@font-face {
+  font-family: dosis;
+  src: url(font/Dosis.ttf);
+}
+
+/* custom fonts ends */
