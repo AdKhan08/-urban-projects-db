@@ -10,87 +10,39 @@
 <body>
 
 <!-- Map -->
-	<div class="left">
-		<div class="card">
-			<div id="card_image"><img src="images/map.png" id="image"></div>
-			<div id="disc_agra">
-				<a onclick="select_city('Agra')"><span id="Agra" class="selected_city"></span></a>
-			</div>
-			<div id="disc_aligarh">
-				<a onclick="select_city('Aligarh')"><span id="Aligarh" class="unselected_city"></span></a>
-			</div>
-			<div id="disc_lucknow">
-				<a onclick="select_city('Lucknow')"><span id="Lucknow" class="unselected_city"></span></a>
-			</div>
+	<div class="card">
+		<div id="card_image"><img src="images/map.png" id="image"></div>
+		<div id="agra">
+			<a onclick="select_city('disc_agra')"><span id="disc_agra" class="selected_city"></span></a>
 		</div>
-		<div class="monument">
-			<div id="city_title_1">Agra</div>
-			<div id="city_title_2">Smart City</div>
+		<div id="aligarh">
+			<a onclick="select_city('disc_aligarh')"><span id="disc_aligarh" class="unselected_city"></span></a>
+		</div>
+		<div id="lucknow">
+			<a onclick="select_city('disc_lucknow')"><span id="disc_lucknow" class="unselected_city"></span></a>
 		</div>
 	</div>
 
 <!-- Charts -->
-	<div class="charts" style="display:flex">
-
-		<!-- Card 1 -->
+	<div class="charts">
 		<div class="card1">
 			<!-- progress bar title -->
 			<div><h3>Intelligent Traffic Management System Junctions</h3></div>
 			<!-- progress bar subtitle -->
-			<div class="subtitle">(RLVD)E-challan</div>
-			<div style="display:flex; margin-top:5px;">
+			<div class="subtitle">E-challan</div>
+			<div style="display:flex; margin-top:10px;">
 				<!-- progress bar -->
 				<div class="progress_container"><div id="progress" class="progress"></div></div>
 				<!-- progress bar percentage -->
-				<div class="progress_percentage" id="progress_percentage">60%</div>
+				<div class="progress_percentage" id="progress_percentage">20%</div>
 			</div>
-
-			<!-- progress bar subtitle -->
-			<div class="subtitle">(ANPR)Vehicle Tracking, E-challan</div>
-			<div style="display:flex; margin-top:5px;">
-				<!-- progress bar -->
-				<div class="progress_container"><div id="progress1" class="progress1"></div></div>
-				<!-- progress bar percentage -->
-				<div class="progress_percentage" id="progress_percentage1">80%</div>
-			</div>
-
 		</div>
-
-		<!-- Card 2 starts-->
-		<div class="card1">
-			<!-- progress bar title -->
-			<div><h3>Monitoring of Water Supply in ABD Area</h3></div>
-			<!-- progress bar subtitle -->
-			<div class="subtitle">OHT</div>
-			<div style="display:flex; margin-top:5px;">
-				<!-- progress bar -->
-				<div class="progress_container"><div id="progress2" class="progress2"></div></div>
-				<!-- progress bar percentage -->
-				<div class="progress_percentage" id="progress_percentage2">90%</div>
-			</div>
-
-			<!-- progress bar subtitle -->
-			<div class="subtitle">CWR</div>
-			<div style="display:flex; margin-top:5px;">
-				<!-- progress bar -->
-				<div class="progress_container"><div id="progress3" class="progress3"></div></div>
-				<!-- progress bar percentage -->
-				<div class="progress_percentage" id="progress_percentage3">90%</div>
-			</div>
-
-			<!-- progress bar subtitle -->
-			<div class="subtitle">Pumping Stations</div>
-			<div style="display:flex; margin-top:5px;">
-				<!-- progress bar -->
-				<div class="progress_container"><div id="progress4" class="progress4"></div></div>
-				<!-- progress bar percentage -->
-				<div class="progress_percentage" id="progress_percentage4">100%</div>
-			</div>
-
-		</div>
-
-		<!-- Card 2 ends -->
 	</div>
 	
+	<h2>Project Costs Over Time</h2>
+	<canvas id="lineChart" width="400" height="200"></canvas>
+	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="index.js"></script>
 </body>
 </html>
